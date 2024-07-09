@@ -1,129 +1,60 @@
-<html lang="ja"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Ranking</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .controls label,
-        .controls select,
-        .controls input,
-        .controls button {
-            margin: 0 5px;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .timedate,
-        .loading {
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #f2f2f2;
-        }
-
-        table tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D3HWGXQKLQ"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D3HWGXQKLQ');
-</script></head>
-
-<!-- Google tag (gtag.js) -->
-
-
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Character BP Ranking</h1>
-            <p>240701</p>
-        </div>
-        <div class="controls">
-            <div>
-                <label for="characterSelect">キャラクター選択:</label>
-                <select id="characterSelect">
-                    <option value="">全キャラクター</option>
-                <option value="1">モニカ</option><option value="2">イリア</option><option value="3">アイリス</option><option value="4">ロキ</option><option value="5">ソルティーナ</option><option value="6">アムレート</option><option value="7">フェンリル</option><option value="8">フローレンス</option><option value="9">ソーニャ</option><option value="10">モーザ</option><option value="11">シャーロット</option><option value="12">アリアンロッド</option><option value="13">テオドラ</option><option value="14">ペトラ</option><option value="15">サブリナ</option><option value="16">フレイシア</option><option value="17">アモール</option><option value="18">リーン</option><option value="19">ベル</option><option value="20">ディアン</option><option value="21">シズ</option><option value="22">ザラ</option><option value="23">ロザリー</option><option value="24">リブラ</option><option value="25">アイビー</option><option value="26">マーリン</option><option value="27">コルディ</option><option value="28">ニーナ</option><option value="29">メルティーユ</option><option value="30">ルーク</option><option value="31">ガルム</option><option value="32">スクルド</option><option value="33">チェルナ</option><option value="34">ソテイラ</option><option value="35">ミミ</option><option value="36">トロポン</option><option value="37">ハトホル</option><option value="38">オリヴィエ</option><option value="39">プリマヴェーラ</option><option value="40">カロル</option><option value="41">ナターシャ</option><option value="42">フォルティナ</option><option value="43">ケルベロス</option><option value="44">ルサールカ</option><option value="45">エルフリンデ</option><option value="46">ルナリンド</option><option value="47">ヴァルリーデ</option><option value="48">A.A.</option><option value="49">オフィーリア</option><option value="50">アームストロング</option><option value="51">ソフィア</option><option value="52">シヴィ</option><option value="53">ウィーラ</option><option value="54">シフォン</option><option value="55">レア</option><option value="56">クラウディア</option><option value="57">ステラ</option><option value="58">アーティ</option><option value="59">エイル</option><option value="60">フィアー</option><option value="61">[神呪]イリア</option><option value="62">プリシラ</option><option value="63">パラデア</option><option value="64">ギルウィアル</option><option value="66">[黒鎧]アイリス</option><option value="67">リシェス</option><option value="68">フェーネ</option><option value="69">カグヤ</option><option value="70">[夏]サブリナ</option><option value="71">[夏]モーザ</option><option value="72">[夏]コルディ</option><option value="73">[聖夜]アモール</option><option value="74">[聖夜]トロポン</option><option value="75">モルガナ</option><option value="76">ユニ</option><option value="77">ミナシュマリ</option><option value="78">アサヒ</option><option value="82">アレクサンドラ</option><option value="84">リズ</option><option value="85">マチルダ</option><option value="88">[使徒]ロザリー</option></select>
-            </div>
-            <div>
-                <input type="checkbox" id="unlimited"> 全ワールド<br>
-                <input type="number" id="startRange" placeholder="開始範囲" disabled="">
-                <input type="number" id="endRange" placeholder="終了範囲" disabled="">
-                <button id="loadDataButton">データを読み込む</button>
-            </div>
-        </div>
-        <div class="timedate"></div>
-        <div class="loading"></div>
-        <table id="dataTable">
-            <thead>
-                <tr>
-                    <th>Player Name</th>
-                    <th>Rank</th>
-                    <th>Character</th>
-                    <th>BP</th>
-                    <th>World</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-
-        <section class="caution">
-            <h2>注意書き</h2>
-            <p>＊JPサーバーを検索しています</p>
-            <p>＊バトルリーグTOP20以内プレイヤーのキャラのみ適用されます</p>
-            <p>＊情報は完全に正確なものではありません、参考程度にお楽しみください</p>
-            <p>＊読み込むデータが多いため、ネット環境が良い状態でお使いください</p>
-            <p>＊以下のサイトの提供APIを使用して作成されています。<a href="https://mentemori.icu/">https://mentemori.icu/</a></p>
-        </section>
-    </div>
-
-    <script src="script.js"></script>
-
-
-</body></html>
+<style>
+.diet_form {
+    background: #eaf4ff;
+    padding: 10px 30px;
+}
+form dl dt {
+    width: 200px;
+    height: 40px;
+    padding: 10px 0;
+    line-height: 40px;
+    float: left;
+}
+form dl dd {
+    padding: 10px 0;
+    margin: 0;
+}
+.box {
+    box-sizing: border-box;
+    width: 150px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+}
+.calc-btn {
+    width: 80px;
+    height: 30px;
+    border: 1px solid #333;
+}
+.calc-btn:hover {
+    cursor: pointer;
+}
+</style>
+<form class="diet_form">
+    <dl>
+        <dt>体重(kg)：</dt>
+        <dd><input type="number" class="box" name="weight"></dd>
+        <dt>体脂肪率(%)：</dt>
+        <dd><input type="number" class="box" name="bfp"></dd>
+        <p><input type="button" class="calc-btn" onclick="calc(weight.value, bfp.value);" value="計算"></p>
+        <dt>徐脂肪体重(kg)：</dt>
+        <dd><input id="lean" class="box" type="text" readonly=""></dd>
+        <dt>摂取可能カロリー(kcal)：</dt>
+        <dd><input id="cal" class="box" type="text" readonly=""></dd>
+        <dt>タンパク質(g)：</>
+        <dd><input id="protein" class="box" type="text" readonly=""></dd>
+        <dt>脂質(g)：</dt>
+        <dd><input id="fat" class="box" type="text" readonly=""></dd>
+        <dt>炭水化物(g)：</dt>
+        <dd><input id="carbo" class="box" type="text" readonly=""></dd>
+    </dl>
+</form>
+<script>
+    function calc(weight, bfp) {
+        const lean_value = document.getElementById('lean').value = Math.round((weight - (weight * (bfp / 100))) * 100) / 100;
+        const cal_value = document.getElementById('cal').value = Math.round(lean_value * 40);
+        const protein_value = document.getElementById('protein').value = Math.round(lean_value * 2);
+        const fat_value = document.getElementById('fat').value = Math.round(lean_value * 0.9);
+        const carbo_value = document.getElementById('carbo').value = Math.round((cal_value - (protein_value * 4) - (fat_value * 9)) / 4);
+    }
+</script>
