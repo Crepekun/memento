@@ -1,90 +1,129 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Ranking</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .controls label,
+        .controls select,
+        .controls input,
+        .controls button {
+            margin: 0 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .timedate,
+        .loading {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D3HWGXQKLQ"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D3HWGXQKLQ');
+</script></head>
+
+<!-- Google tag (gtag.js) -->
+
+
 <body>
-  <header>
     <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+        <div class="header">
+            <h1>Character BP Ranking</h1>
+            <p>240701</p>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+        <div class="controls">
+            <div>
+                <label for="characterSelect">キャラクター選択:</label>
+                <select id="characterSelect">
+                    <option value="">全キャラクター</option>
+                <option value="1">モニカ</option><option value="2">イリア</option><option value="3">アイリス</option><option value="4">ロキ</option><option value="5">ソルティーナ</option><option value="6">アムレート</option><option value="7">フェンリル</option><option value="8">フローレンス</option><option value="9">ソーニャ</option><option value="10">モーザ</option><option value="11">シャーロット</option><option value="12">アリアンロッド</option><option value="13">テオドラ</option><option value="14">ペトラ</option><option value="15">サブリナ</option><option value="16">フレイシア</option><option value="17">アモール</option><option value="18">リーン</option><option value="19">ベル</option><option value="20">ディアン</option><option value="21">シズ</option><option value="22">ザラ</option><option value="23">ロザリー</option><option value="24">リブラ</option><option value="25">アイビー</option><option value="26">マーリン</option><option value="27">コルディ</option><option value="28">ニーナ</option><option value="29">メルティーユ</option><option value="30">ルーク</option><option value="31">ガルム</option><option value="32">スクルド</option><option value="33">チェルナ</option><option value="34">ソテイラ</option><option value="35">ミミ</option><option value="36">トロポン</option><option value="37">ハトホル</option><option value="38">オリヴィエ</option><option value="39">プリマヴェーラ</option><option value="40">カロル</option><option value="41">ナターシャ</option><option value="42">フォルティナ</option><option value="43">ケルベロス</option><option value="44">ルサールカ</option><option value="45">エルフリンデ</option><option value="46">ルナリンド</option><option value="47">ヴァルリーデ</option><option value="48">A.A.</option><option value="49">オフィーリア</option><option value="50">アームストロング</option><option value="51">ソフィア</option><option value="52">シヴィ</option><option value="53">ウィーラ</option><option value="54">シフォン</option><option value="55">レア</option><option value="56">クラウディア</option><option value="57">ステラ</option><option value="58">アーティ</option><option value="59">エイル</option><option value="60">フィアー</option><option value="61">[神呪]イリア</option><option value="62">プリシラ</option><option value="63">パラデア</option><option value="64">ギルウィアル</option><option value="66">[黒鎧]アイリス</option><option value="67">リシェス</option><option value="68">フェーネ</option><option value="69">カグヤ</option><option value="70">[夏]サブリナ</option><option value="71">[夏]モーザ</option><option value="72">[夏]コルディ</option><option value="73">[聖夜]アモール</option><option value="74">[聖夜]トロポン</option><option value="75">モルガナ</option><option value="76">ユニ</option><option value="77">ミナシュマリ</option><option value="78">アサヒ</option><option value="82">アレクサンドラ</option><option value="84">リズ</option><option value="85">マチルダ</option><option value="88">[使徒]ロザリー</option></select>
+            </div>
+            <div>
+                <input type="checkbox" id="unlimited"> 全ワールド<br>
+                <input type="number" id="startRange" placeholder="開始範囲" disabled="">
+                <input type="number" id="endRange" placeholder="終了範囲" disabled="">
+                <button id="loadDataButton">データを読み込む</button>
+            </div>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
+        <div class="timedate"></div>
+        <div class="loading"></div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Rank</th>
+                    <th>Character</th>
+                    <th>BP</th>
+                    <th>World</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <section class="caution">
+            <h2>注意書き</h2>
+            <p>＊JPサーバーを検索しています</p>
+            <p>＊バトルリーグTOP20以内プレイヤーのキャラのみ適用されます</p>
+            <p>＊情報は完全に正確なものではありません、参考程度にお楽しみください</p>
+            <p>＊読み込むデータが多いため、ネット環境が良い状態でお使いください</p>
+            <p>＊以下のサイトの提供APIを使用して作成されています。<a href="https://mentemori.icu/">https://mentemori.icu/</a></p>
+        </section>
     </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
-</body>
-</html>
+
+    <script src="script.js"></script>
+
+
+</body></html>
