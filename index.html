@@ -44,7 +44,7 @@
         function calculation(r, rr, sr, srr) {
         const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24);
         const rar_value = document.getElementById('rar').value = Math.round(72-count);
-        const diamond_value = document.getElementById('diamond').value = Math.round(necessary_rarity/3*660);
+        const diamond_value = document.getElementById('diamond').value = Math.round(rar/3*660);
         }
     </script>
     </div>
@@ -68,11 +68,8 @@
 </form>
 <script>
     function calc(weight, bfp) {
-        const lean_value = document.getElementById('lean').value = Math.round((weight - (weight * (bfp / 100))) * 100) / 100;
-        const cal_value = document.getElementById('cal').value = Math.round(lean_value * 40);
-        const protein_value = document.getElementById('protein').value = Math.round(lean_value * 2);
-        const fat_value = document.getElementById('fat').value = Math.round(lean_value * 0.9);
-        const carbo_value = document.getElementById('carbo').value = Math.round((cal_value - (protein_value * 4) - (fat_value * 9)) / 4);
-        const test_value = document.getElementById('test').value = Math.round(1+1);
+        const count_value = document.getElementById('count').value = Math.round(weight*1+weight*4+weight*8+weightweight*24);
+        const rar_value = document.getElementById('rar').value = Math.round(72-count);
+        const diamond_value = document.getElementById('diamond').value = Math.round(bfp/3*660);
     }
 </script>
