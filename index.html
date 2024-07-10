@@ -26,9 +26,10 @@
         <dd><span style="color: #ffffff;">　　　　+</span>SRの数：<input type="number" class="box" name="sr"></dd>
         <dd><span style="color: #ffffff;">　　　　</span>SR+の数：<input type="number" class="box" name="srr"></dd>
    <!-- <dd><span style="color: #ffffff;">　SR+</span>目標レア度：<input type="number" class="box" name="rarity"></dd> -->    
-        <p><input type="button" class="calc-btn" onclick="rarity_calculation(r.value, rr.value, sr.value, srr.value);" value="計算"></p>
-        <dd><span style="color: #ffffff;">S+</span>必要なRキャラ：<input id="necessary_rarity" class="box" type="text" readonly=""></dd>
-        <dd><span style="color: #ffffff;">SR+</span>必要なダイヤ：<input id="necessary_diamond" class="box" type="text" readonly=""></dd> 
+        <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value);" value="計算"></p>
+        <dd><span style="color: #ffffff;">S+</span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
+        <dd><span style="color: #ffffff;">S+</span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
+        <dd><span style="color: #ffffff;">SR+</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
         ※必要なダイヤ=魔女の手紙換算
 
 
@@ -40,10 +41,10 @@
     <!-- <script src="./js/app.js"></script> -->
     
     <script>
-        function rarity_calculation(r, rr, sr, srr) {
+        function calculation(r, rr, sr, srr) {
         const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24);
-        const necessary_rarity_value = document.getElementById('necessary_rarity').value = Math.round(72-count);
-        const necessary_diamond_value = document.getElementById('necessary_diamond').value = Math.round(necessary_rarity/3*660);
+        const rar_value = document.getElementById('rar').value = Math.round(72-count);
+        const diamond_value = document.getElementById('diamond').value = Math.round(necessary_rarity/3*660);
         }
     </script>
     </div>
