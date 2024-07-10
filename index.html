@@ -50,11 +50,14 @@
     </div>
 </body>
 </html>
-
+<form class="diet_form">
+        <dl>
         <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
         <dd><span style="color: #ffffff;">　　　　S+</span>Rの数：<input type="number" class="box" name="r"></dd>
         <dd><span style="color: #ffffff;">　　　　S</span>R+の数：<input type="number" class="box" name="rr"></dd>
         <p><input type="button" class="calc-btn" onclick="calc(r.value, rr.value);" value="計算"></p>
+        </dl>
+</form>
 <script>
     function calc(r, rr) {
         const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+r*8+rr*24);
