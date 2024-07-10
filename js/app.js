@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn'); 
 
     <!-- const hint0 = [,,]; -->
-    const hint1 = [,,];
+    const hint1 = [,運命・導きガチャからの赤玉の数,];
     
     const quizList = [
         
