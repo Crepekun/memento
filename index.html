@@ -52,13 +52,13 @@
 </html>
 
         <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
-        <dd><span style="color: #ffffff;">　　　　S+</span>Rの数：<input type="number" class="box" name="weight"></dd>
-        <dd><span style="color: #ffffff;">　　　　S</span>R+の数：<input type="number" class="box" name="bfp"></dd>
-        <p><input type="button" class="calc-btn" onclick="calc(weight.value, bfp.value);" value="計算"></p>
+        <dd><span style="color: #ffffff;">　　　　S+</span>Rの数：<input type="number" class="box" name="r"></dd>
+        <dd><span style="color: #ffffff;">　　　　S</span>R+の数：<input type="number" class="box" name="rr"></dd>
+        <p><input type="button" class="calc-btn" onclick="calc(r.value, rr.value);" value="計算"></p>
 <script>
-    function calc(weight, bfp) {
-        const count_value = document.getElementById('count').value = Math.round(weight*1+weight*4+weight*8+weight*24);
+    function calc(r, rr) {
+        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+r*8+rr*24);
         const rar_value = document.getElementById('rar').value = Math.round(72-count);
-        const diamond_value = document.getElementById('diamond').value = Math.round(bfp/3*660);
+        const diamond_value = document.getElementById('diamond').value = Math.round(rar/3*660);
     }
 </script>
