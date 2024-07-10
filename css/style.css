@@ -34,13 +34,13 @@ a{
 }
 
 #header{
-    margin-bottom: 200px;
+    margin-bottom: 20px;
 }
 
 #header button{
     margin-left: 3%;
     margin-top: 0px;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     width: 80px;
     height: 30px;
     border-radius: 6px;
