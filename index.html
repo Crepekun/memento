@@ -27,12 +27,13 @@
         <dd><span style="color: #ffffff;">　　　　S</span>R+の数：<input type="number" class="box" name="rr"></dd>
         <dd><span style="color: #ffffff;">　　　　+</span>SRの数：<input type="number" class="box" name="sr"></dd>
         <dd><span style="color: #ffffff;">　　　　</span>SR+の数：<input type="number" class="box" name="srr"></dd>
+        <dd><span style="color: #ffffff;">　　　　</span>SSRの数：<input type="number" class="box" name="ssr"></dd>
    <!-- <dd><span style="color: #ffffff;">　SR+</span>目標レア度：<input type="number" class="box" name="rarity"></dd> -->    
-        <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value);" value="計算"></p>
-        <dd><span style="color: #ffffff;">S+</span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
-        <dd><span style="color: #ffffff;">S+</span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
-        <dd><span style="color: #ffffff;">SR+</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
-        ※必要なダイヤ=魔女の手紙換算1
+        <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value);" value="計算"></p>
+        <dd><span style="color: #ffffff;">　　　UR</span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
+        <dd><span style="color: #ffffff;"></span>URまでに必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
+        <dd><span style="color: #ffffff;">　　　URR</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
+        ※必要なダイヤ=魔女の手紙換算
 
 
 
@@ -45,10 +46,10 @@
 </form>
 
     <script>
-        function calculation(r, rr, sr, srr) {
-        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24);
-        const rar_value = document.getElementById('rar').value = Math.round(72-count);
-        const diamond_value = document.getElementById('diamond').value = Math.round(rar/3*660);
+        function calculation(r, rr, sr, srr, ssr) {
+        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72);
+        const rar_value = document.getElementById('rar').value = Math.round(144-count_value);
+        const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
         }
     </script>
     </div>
