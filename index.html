@@ -58,20 +58,14 @@
         <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
         <dd><span style="color: #ffffff;">　　　　S+</span>Rの数：<input type="number" class="box" name="weight"></dd>
         <dd><span style="color: #ffffff;">　　　　S</span>R+の数：<input type="number" class="box" name="bfp"></dd>
-        <dd><span style="color: #ffffff;">　　　　+</span>SRの数：<input type="number" class="box" name="sr"></dd>
-        <dd><span style="color: #ffffff;">　　　　</span>SR+の数：<input type="number" class="box" name="srr"></dd>
         <p><input type="button" class="calc-btn" onclick="calc(weight.value, bfp.value);" value="計算"></p>
-        <dd><span style="color: #ffffff;">S+</span>必要なRキャラ：<input id="lean" class="box" type="text" readonly=""></dd>
-        <dd><span style="color: #ffffff;">SR+</span>必要なダイヤ：<input id="cal" class="box" type="text" readonly=""></dd> 
-        <dd><span style="color: #ffffff;">S+</span>必要なRキャラ：<input id="protein" class="box" type="text" readonly=""></dd>
-        <dd><span style="color: #ffffff;">SR+</span>必要なダイヤ：<input id="fat" class="box" type="text" readonly=""></dd> 
         <dd><span style="color: #ffffff;">S+</span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
         <dd><span style="color: #ffffff;">S+</span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
         <dd><span style="color: #ffffff;">SR+</span>必要なダイヤ1：<input id="diamond" class="box" type="text" readonly=""></dd> 
 </form>
 <script>
     function calc(weight, bfp) {
-        const count_value = document.getElementById('count').value = Math.round(weight*1+weight*4+weight*8+weightweight*24);
+        const count_value = document.getElementById('count').value = Math.round(weight*1+weight*4+weight*8+weight*24);
         const rar_value = document.getElementById('rar').value = Math.round(72-count);
         const diamond_value = document.getElementById('diamond').value = Math.round(bfp/3*660);
     }
