@@ -1,6 +1,3 @@
-
-
-document.addEventListener('DOMContentLoaded', () => {
     <!-- r, rr, sr, srr, ssr -->
     <!-- 72, 24, 8, 4, 1 -->
     function rarity_calculation(r, rr, sr, srr, rarity) {
