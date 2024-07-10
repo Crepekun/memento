@@ -20,6 +20,8 @@
         <!-- <button type=“button” class="btn" >レア計算</button> -->
         <!-- <button type=“button” class="btn" >赤玉計算</button> -->
     </header>
+    <form class="diet_form">
+        <dl>
         <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
         <dd><span style="color: #ffffff;">　　　　S+</span>Rの数：<input type="number" class="box" name="r"></dd>
         <dd><span style="color: #ffffff;">　　　　S</span>R+の数：<input type="number" class="box" name="rr"></dd>
@@ -39,7 +41,8 @@
     </header>
 
     <!-- <script src="./js/app.js"></script> -->
-    
+            </dl>
+    </form>
     <script>
         function calculation(r, rr, sr, srr) {
         const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24);
