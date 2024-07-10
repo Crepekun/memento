@@ -5,13 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const buttons = document.querySelectorAll('.btn'); 
 
-    const hint0 = [,"アイテムの個数に注目","1文字目は「ふ」"];
-    const hint1 = [,"Nはレアリティ","モニカ、シャーロット、シズ、ガルム"];
-    const hint2 = [,"最初に曲がる時の文字は「リ」","下の「○」に色がついている！これを頼りに順番に当てはめると・・"];
-    const hint3 = [,"解答欄の下の矢印も気になる・・・"];
-    const hint4 = [,"上はグラベンスティン、右はウィスケルケー,,,"];
-    const hint5 = [,"「#数字#」はチャットに打ち込むととけねこスタンプの感情を表してくれる記号！","感情が4つ並んでいることに気づくと、とある4文字熟語が連想される","緑の丸は反対を向いている・・・"];
-
+    <!-- const hint0 = [,,]; -->
+    const hint1 = [,,];
+    
     const quizList = [
         
         {   id: 0, 
