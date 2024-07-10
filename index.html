@@ -20,16 +20,20 @@
     </header>
 
         <dt>Rの数：</dt>
-        <dd><input type="number" class="box" name="weight"></dd>
+        <dd><input type="number" class="box" name="r"></dd>
         <dt>R+の数：</dt>
-        <dd><input type="number" class="box" name="bfp"></dd>
-        <p><input type="button" class="calc-btn" onclick="calc(weight.value, bfp.value);" value="計算"></p>
+        <dd><input type="number" class="box" name="rr"></dd>
         <dt>SRの数：</dt>
-        <dd><input id="lean" class="box" type="text" readonly=""></dd>
+        <dd><input type="number" class="box" name="sr"></dd>
         <dt>SR+の数：</dt>
-        <dd><input id="cal" class="box" type="text" readonly=""></dd>
-        <dt>タンパク質(g)：</>
-        <dd><input id="protein" class="box" type="text" readonly=""></dd>
+        <dd><input type="number" class="box" name="srr"></dd>
+        <dt>目標レア度：</>
+        <dd><input type="number" class="box" name="rarity"></dd>    
+        <p><input type="button" class="calc-btn" onclick="rarity_calculation(r.value, rr.value, sr.value, srr.value, rarity.value);" value="計算"></p>
+        <dt>必要なRキャラ：</>
+        <dd><input id="necessary_rarity" class="box" type="text" readonly=""></dd>
+        <dt>必要なダイヤ(魔女の手紙換算) </>
+        <dd><input id="necessary_diamond" class="box" type="text" readonly=""></dd> 
         
 
 
@@ -44,11 +48,11 @@
 </body>
 </html>
 <script>
-    function calc(weight, bfp) {
-        const lean_value = document.getElementById('lean').value = Math.round((weight - (weight * (bfp / 100))) * 100) / 100;
-        const cal_value = document.getElementById('cal').value = Math.round(lean_value * 40);
-        const protein_value = document.getElementById('protein').value = Math.round(lean_value * 2);
-        const fat_value = document.getElementById('fat').value = Math.round(lean_value * 0.9);
-        const carbo_value = document.getElementById('carbo').value = Math.round((cal_value - (protein_value * 4) - (fat_value * 9)) / 4);
+    <!-- r, rr, sr, srr, ssr -->
+    <!-- 72, 24, 8, 4, 1 -->
+    function rarity_calculation(r, rr, sr, srr, rarity) {
+        const count_value = document.getElementById('count').value = Math.round(1);
+        const necessary_rarity_value = document.getElementById('necessary_rarity').value = Math.round(1);
+        const necessary_diamond_value = document.getElementById('necessary_diamond').value = Math.round(1);
     }
 </script>
