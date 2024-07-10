@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const hint0 = [,運命・導きガチャからの赤玉の数,];
     const hint1 = [,運命・導きガチャからの赤玉の数,];
+    const hint2 = [,運命・導きガチャからの赤玉の数,];
+    const hint3 = [,運命・導きガチャからの赤玉の数,];
+    const hint4 = [,運命・導きガチャからの赤玉の数,];
+    const hint5 = [,運命・導きガチャからの赤玉の数,];
     
     const quizList = [
         
