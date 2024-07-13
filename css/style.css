@@ -1,57 +1,34 @@
-<style type="text/css">
-   /* ▼タブ機能の掲載領域の装飾(※必須ではありません) */
-   .tabbox { margin: 0px; padding: 1em; background-color: #ffffff; }
-
-   /* ▼タブ機能を制御するラジオボタン(非表示にする) */
-   .tabbox input { display: none; }
-
-   /* ▼タブ(共通装飾＋非選択状態の装飾) */
-   .tab {
-      display: inline-block;
-      border-width: 1px 1px 0px 1px;
-      border-style: solid;
-      border-color: black;
-      border-radius: 0.75em 0.75em 0px 0px;
-      padding: 0.75em 1em;
-      color: black;
-      background-color: #ffffff;
-      font-weight: bold;
-   }
-
-   /* ▼タブにマウスポインタが載った際の装飾 */
-   .tab:hover {
-      background-color: #ccffcc;
-      color: green;
-      cursor: pointer;
-   }
-
-   /* ▼チェックが入っているラジオボタンの隣にあるタブの装飾(＝選択状態のタブ) */
-   input:checked + .tab {
-      color: red;
-      background-color: #ffffff;
-      position: relative;
-      z-index: 10;
-   }
-
-   /* ▼タブの中身(共通装飾＋非選択状態の装飾) */
-   .tabcontent {
-      display: none;
-      border: 1px solid black;
-      margin-top: -1px;
-      padding: 1em;
-      position: relative;
-      z-index: 0;
-      background-color: #ffffff;
-   }
-
-   /* ▼チェックが入っているラジオボタンに対応するタブの中身を表示する */
-   #tabcheck1:checked ~ #tabcontent1 { display: block; }
-   #tabcheck2:checked ~ #tabcontent2 { display: block; }
-   #tabcheck3:checked ~ #tabcontent3 { display: block; }
-   #tabcheck21:checked ~ #tabcontent21 { display: block; }
-   #tabcheck22:checked ~ #tabcontent22 { display: block; }
-
-
+/* ▼タブ */
+#tabcontrol a {
+   display: inline-block;            /* インラインブロック化 */
+   border-width: 1px 1px 0px 1px;    /* 下以外の枠線を引く */
+   border-style: solid;              /* 枠線の種類：実線 */
+   border-color: black;              /* 枠線の色：黒色 */
+   border-radius: 0.75em 0.75em 0 0; /* 枠線の左上角と右上角だけを丸く */
+   padding: 0.75em 1em;              /* 内側の余白 */
+   text-decoration: none;            /* リンクの下線を消す */
+   color: black;                     /* 文字色：黒色 */
+   background-color: white;          /* 背景色：白色 */
+   font-weight: bold;                /* 太字 */
+   position: relative;               /* JavaScriptでz-indexを調整するために必要 */
+}
+/* ▼タブにマウスポインタが載った際（任意） */
+#tabcontrol a:hover {
+   text-decoration: underline;   /* リンクの下線を引く */
+}
+/* ▼タブの中身 */
+#tabbody div {
+   border: 1px solid black; /* 枠線：黒色の実線を1pxの太さで引く */
+   margin-top: -1px;        /* 上側にあるタブと1pxだけ重ねるために「-1px」を指定 */
+   padding: 1em;            /* 内側の余白量 */
+   background-color: white; /* 背景色：白色 */
+   position: relative;      /* z-indexを調整するために必要 */
+   z-index: 0;              /* 重なり順序を「最も背面」にするため */
+}
+/* ▼タブの配色 */
+#tabcontrol a:nth-child(1), #tabbody div:nth-child(1) { background-color: #ffffdd; }/* 1つ目のタブとその中身用の配色 */
+#tabcontrol a:nth-child(2), #tabbody div:nth-child(2) { background-color: #ddffdd; }/* 2つ目のタブとその中身用の配色 */
+#tabcontrol a:nth-child(3), #tabbody div:nth-child(3) { background-color: #ddddff; }/* 3つ目のタブとその中身用の配色 */
 
     .diet_form {
         background: #ff;
@@ -347,4 +324,4 @@ main{
     width: 100%;
     height: 100%;
 }
-</style>
+
