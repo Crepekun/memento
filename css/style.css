@@ -63,12 +63,13 @@
     }
     .calc-btn:hover {
         cursor: pointer;
-    }.calc-btn2 {
+    }
+   .calc-btnn {
         width: 80px;
         height: 30px;
         border: 1px solid #333;
     }
-    .calc-btn2:hover {
+    .calc-btnn:hover {
         cursor: pointer;
     }
 
