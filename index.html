@@ -11,118 +11,99 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-       <p style="text-align: left;">ver1.24 2024/07/13</p>
+        <br>
     </header>
+    
 <p id="tabcontrol">
-   <a href="#tabpage1">キャラレアリティ</a>
-   <a href="#tabpage2">赤玉</a>
+       <a href="#tabpage1">キャラレアリティ</a>
+       <a href="#tabpage2">赤玉</a>
+       <a href="#tabpage3">作成中...v3</a>
 </p>
+    
 <div id="tabbody">
     <div id="tabpage1">
-        <body>
-          <h1 style="text-align: center;">キャラレアリティ計算</h1>
-          <form class="diet_form">
-                  <dl>
-                      <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
-                      <dd><span style="color: #ffffff;">　　　　S++</span>Rの数：<input type="number" class="box" name="r"></dd>
-                      <dd><span style="color: #ffffff;">　　　　S+</span>R+の数：<input type="number" class="box" name="rr"></dd>
-                      <dd><span style="color: #ffffff;">　　　　++</span><span style="color: #FFCC00;">SR</span>の数：<input type="number" class="box" name="sr"></dd>
-                      <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #FFCC00;">SR+</span>の数：<input type="number" class="box" name="srr"></dd>
-                      <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #800080;">SSR</span>の数：<input type="number" class="box" name="ssr"></dd>
-                      <dd><span style="color: #ffffff;">　　　　</span><span style="color: #800080;">SSR+</span>の数：<input type="number" class="box" name="ssrr"></dd>   
-                      <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
-                      <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
-                      <span style="color: #ff0000;">SSR+からUR+までに必要な素材</span>
-                      <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
-                      <dd><span style="color: #ffffff;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
-                      ※必要なダイヤ=魔女の手紙換算
-                      <header id="header">
-                          <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
-                      </header>
-      
-                      <script>
-                          function calculation(r, rr, sr, srr, ssr, ssrr) {
-                          const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72+ssrr*144);
-                          const rar_value = document.getElementById('rar').value = Math.round(288-count_value);
-                          const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
-                          }
-                      </script>
-                  </div>
-              </dl>
-          </form>
-        </body>
+<body>
+        <h1 style="text-align: center;">キャラレアリティ計算</h1>
+<form class="diet_form">
+        <dl>
+        <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
+        <dd><span style="color: #ffffff;">　　　　S++</span>Rの数：<input type="number" class="box" name="r"></dd>
+        <dd><span style="color: #ffffff;">　　　　S+</span>R+の数：<input type="number" class="box" name="rr"></dd>
+        <dd><span style="color: #ffffff;">　　　　++</span><span style="color: #FFCC00;">SR</span>の数：<input type="number" class="box" name="sr"></dd>
+        <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #FFCC00;">SR+</span>の数：<input type="number" class="box" name="srr"></dd>
+        <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #800080;">SSR</span>の数：<input type="number" class="box" name="ssr"></dd>
+        <dd><span style="color: #ffffff;">　　　　</span><span style="color: #800080;">SSR+</span>の数：<input type="number" class="box" name="ssrr"></dd>
+   <!-- <dd><span style="color: #ffffff;">　SR+</span>目標レア度：<input type="number" class="box" name="rarity"></dd> -->    
+        <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
+        <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
+        <span style="color: #ff0000;">SSR+からUR+までに必要な素材</span>
+        <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
+        <dd><span style="color: #ffffff;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
+        ※必要なダイヤ=魔女の手紙換算
+
+
+
+    <header id="header">
+        <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
+    </header>
+
+    <!-- <script src="./js/app.js"></script> -->
+        </dl>
+</form>
+
+    <script>
+        function calculation(r, rr, sr, srr, ssr, ssrr) {
+        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72+ssrr*144);
+        const rar_value = document.getElementById('rar').value = Math.round(288-count_value);
+        const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
+        }
+    </script>
     </div>
-    <div id="tabpage2">
-        <body>
-            <h1 style="text-align: center;">運命赤玉計算</h1>
-            <form class="diet_form2">
-                    <dl>
-                        <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
-                        <dd><span style="color: #ffffcc;"></span>回すガチャ回数：<input type="number" class="box" name="x"></dd>
-                        <dd><span style="color: #ffffcc;"></span>所持済運命の箱：<input type="number" class="box" name="y"></dd>
-                        <dd><span style="color: #ffffcc;"></span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z"></dd> 
-                        ※メインクエストの左下で確認できます
-                        <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
-                        <dd><span style="color: #ffffff;"></span>赤玉の数：<input id="countn" class="box" type="text" readonly=""></dd>
-                        <header id="header">
-                            <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
-                        </header>
-        
-                        <script>
-                            function jasper(x, y, z) {
-                            const countnn_value = document.getElementById('countnn').value = Math.round(z/24*16*y);
-                            const countn_value = document.getElementById('countn').value = Math.round(countnn.value+z/24*16*y);
-                            }
-                        </script>
-                </form>
-            </body>
-        </div>
+</body>
     </div>
+    <div id="tabbody">
+        <div id="tabpage2">
+            <body>
+        <h1 style="text-align: center;">赤玉</h1>
+<form class="diet_form">
+        <dl>
+        <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
+        <dd><span style="color: #ffffff;">　　　　S++</span>Rの数：<input type="number" class="box" name="r"></dd>
+        <dd><span style="color: #ffffff;">　　　　S+</span>R+の数：<input type="number" class="box" name="rr"></dd>
+        <dd><span style="color: #ffffff;">　　　　++</span><span style="color: #FFCC00;">SR</span>の数：<input type="number" class="box" name="sr"></dd>
+        <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #FFCC00;">SR+</span>の数：<input type="number" class="box" name="srr"></dd>
+        <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #800080;">SSR</span>の数：<input type="number" class="box" name="ssr"></dd>
+        <dd><span style="color: #ffffff;">　　　　</span><span style="color: #800080;">SSR+</span>の数：<input type="number" class="box" name="ssrr"></dd>
+   <!-- <dd><span style="color: #ffffff;">　SR+</span>目標レア度：<input type="number" class="box" name="rarity"></dd> -->    
+        <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
+        <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
+        <span style="color: #ff0000;">SSR+からUR+までに必要な素材</span>
+        <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
+        <dd><span style="color: #ffffff;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
+        ※必要なダイヤ=魔女の手紙換算
+
+
+
+    <header id="header">
+        <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
+    </header>
+
+        </dl>
+</form>
+
+    <script>
+        function calculation(r, rr, sr, srr, ssr, ssrr) {
+        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72+ssrr*144);
+        const rar_value = document.getElementById('rar').value = Math.round(288-count_value);
+        const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
+        }
+     </script>
+</body>
+    </div>
+    <div id="tabbody">
+        <div id="tabpage3">
+            作成中...
+    </div>
+</div>
 </html>
-<script type="text/javascript">
-// ---------------------------
-// ▼A：対象要素を得る
-// ---------------------------
-var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
-var pages = document.getElementById('tabbody').getElementsByTagName('div');
-
-// ---------------------------
-// ▼B：タブの切り替え処理
-// ---------------------------
-function changeTab() {
-   // ▼B-1. href属性値から対象のid名を抜き出す
-   var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
-
-   // ▼B-2. 指定のタブページだけを表示する
-   for(var i=0; i<pages.length; i++) {
-      if( pages[i].id != targetid ) {
-         pages[i].style.display = "none";
-      }
-      else {
-         pages[i].style.display = "block";
-      }
-   }
-
-   // ▼B-3. クリックされたタブを前面に表示する
-   for(var i=0; i<tabs.length; i++) {
-      tabs[i].style.zIndex = "0";
-   }
-   this.style.zIndex = "10";
-
-   // ▼B-4. ページ遷移しないようにfalseを返す
-   return false;
-}
-
-// ---------------------------
-// ▼C：すべてのタブに対して、クリック時にchangeTab関数が実行されるよう指定する
-// ---------------------------
-for(var i=0; i<tabs.length; i++) {
-   tabs[i].onclick = changeTab;
-}
-
-// ---------------------------
-// ▼D：最初は先頭のタブを選択しておく
-// ---------------------------
-tabs[0].onclick();
-
-</script>
+ <script src="./js/app.js"></script>
