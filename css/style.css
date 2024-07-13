@@ -1,3 +1,16 @@
+<style type="text/css">
+   /* ▼チェックが入っているラジオボタンの隣にあるタブの装飾(＝選択状態のタブ) */
+   input:checked + .tab {
+      z-index: 10;         /* ※2A */
+      position: relative;  /* ※3 */
+   }
+   /* ▼タブの中身(共通装飾＋非選択状態の装飾) */
+   .tabcontent {
+      margin-top: -1px;    /* ※1 */
+      z-index: 0;          /* ※2B */
+      position: relative;  /* ※3 */
+   }
+</style>
 /* ▼タブ */
 #tabcontrol a {
    display: inline-block;            /* インラインブロック化 */
