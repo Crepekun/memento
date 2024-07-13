@@ -19,7 +19,38 @@
 </p>
 <div id="tabbody">
     <div id="tabpage1">
-        作成中...
+        <body>
+          <h1 style="text-align: center;">キャラレアリティ計算</h1>
+          <form class="diet_form">
+                  <dl>
+                      <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
+                      <dd><span style="color: #ffffff;">　　　　S++</span>Rの数：<input type="number" class="box" name="r"></dd>
+                      <dd><span style="color: #ffffff;">　　　　S+</span>R+の数：<input type="number" class="box" name="rr"></dd>
+                      <dd><span style="color: #ffffff;">　　　　++</span><span style="color: #FFCC00;">SR</span>の数：<input type="number" class="box" name="sr"></dd>
+                      <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #FFCC00;">SR+</span>の数：<input type="number" class="box" name="srr"></dd>
+                      <dd><span style="color: #ffffff;">　　　　+</span><span style="color: #800080;">SSR</span>の数：<input type="number" class="box" name="ssr"></dd>
+                      <dd><span style="color: #ffffff;">　　　　</span><span style="color: #800080;">SSR+</span>の数：<input type="number" class="box" name="ssrr"></dd>   
+                      <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
+                      <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
+                      <span style="color: #ff0000;">SSR+からUR+までに必要な素材</span>
+                      <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd>
+                      <dd><span style="color: #ffffff;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
+                      ※必要なダイヤ=魔女の手紙換算
+                      <header id="header">
+                          <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
+                      </header>
+      
+                      <script>
+                          function calculation(r, rr, sr, srr, ssr, ssrr) {
+                          const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72+ssrr*144);
+                          const rar_value = document.getElementById('rar').value = Math.round(288-count_value);
+                          const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
+                          }
+                      </script>
+                  </div>
+              </dl>
+          </form>
+        </body>
     </div>
     <div id="tabpage2">
         <body>
