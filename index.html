@@ -13,14 +13,14 @@
         </a>
         <br>
     </header>
-<p id="tabcontrol">
-       <a href="#tabpage1">キャラレアリティ</a>
-       <a href="#tabpage2">赤玉</a>
-       <a href="#tabpage3">作成中...v3</a>
+<div class="tabbox">
+    <input type="radio" name="tabset" id="tabcheck1" checked><label for="tabcheck1" class="tab">キャラレアリティ</label>
+    <input type="radio" name="tabset" id="tabcheck2"        ><label for="tabcheck2" class="tab">赤玉</label>
+    <input type="radio" name="tabset" id="tabcheck3"        ><label for="tabcheck3" class="tab">作成中...v3</label>
+
 </p>
     
-<div id="tabbody">
-    <div id="tabpage1">
+<div class="tabcontent" id="tabcontent1">
 <body>
         <h1 style="text-align: center;">キャラレアリティ計算</h1>
 <form class="diet_form">
@@ -60,8 +60,7 @@
     </div>
 </body>
     </div>
-    <div id="tabbody">
-        <div id="tabpage2">
+    <div class="tabcontent" id="tabcontent2">
             <body>
         <h1 style="text-align: center;">赤玉</h1>
 <form class="diet_form">
@@ -99,8 +98,7 @@
      </script>
 </body>
     </div>
-    <div id="tabbody">
-        <div id="tabpage3">
+    <div class="tabcontent" id="tabcontent3">
             作成中...
     </div>
 </div>
