@@ -137,7 +137,9 @@ p {
         
                         <script>
                             function jade(i, j, k) {
-                            const countnn_value = document.getElementById('countnn').value = Math.round(k/(100+vipa+vipb)*100*16*i+k/(100+vipa+vipb)*100*16*j);
+                            const countt_value = document.getElementById('countt').value = Math.round(100+vipa+vipb);
+                            const count_value = document.getElementById('count').value = Math.round(k/counttt.value*100);
+                            const countnn_value = document.getElementById('countnn').value = Math.round(count.value*16*i+count.value*16*j);
                             }
                         </script>
                     </dl>
