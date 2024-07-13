@@ -54,7 +54,30 @@
         
     <div id="tabbody">
         <div id="tabpage1">
-                作成中...
+            <body>
+                <h1 style="text-align: center;">運命赤玉計算</h1>
+                
+                    
+                       
+                        <dd><span style="color: #ffffcc;"></span>回すガチャ回数：<input type="number" class="box" name="x"></dd>
+                        <dd><span style="color: #ffffcc;"></span>所持済運命の箱：<input type="number" class="box" name="y"></dd>
+                        <dd><span style="color: #ffffcc;"></span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z"></dd> 
+                        ※メインクエストの左下で確認できます
+                        <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
+                        <dd><span style="color: #ffffff;"></span>赤玉の数：<input id="countn" class="box" type="text" readonly=""></dd>
+                        <header id="header">
+                            <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
+                        </header>
+        
+                        <script>
+                            function jasper(x, y, z) {
+                            const countnn_value = document.getElementById('countnn').value = Math.round(z/24*16*y);
+                            const countn_value = document.getElementById('countn').value = Math.round(countnn.value+z/24*16*y);
+                            }
+                        </script>
+                    
+                
+            </body>
         </div>
         <div id="tabpage2">
             <body>
@@ -78,7 +101,7 @@
                             const countn_value = document.getElementById('countn').value = Math.round(countnn.value+z/24*16*y);
                             }
                         </script>
-                    
+                       </div>
                 
             </body>
         </div>
