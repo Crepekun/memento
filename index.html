@@ -50,7 +50,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <p style="text-align: left;">ver2.28 2024/07/13</p>
+        <p style="text-align: left;">ver2.29 2024/07/13</p>
     </header>
         
     <p id="tabcontrol">
@@ -140,8 +140,7 @@
         
                         <script>
                             function jade(i, j, k, vipa, vipb) {
-                            const countz_value = document.getElementById('countz').value = Math.round(k/(100+vipa+vipb)*100);
-                            const countx_value = document.getElementById('countx').value = Math.round(k/countx_value*100);
+                            const countz_value = document.getElementById('countz').value = Math.round(k/(100+vipa+vipb)*100*16*(i+j));
                             const county_value = document.getElementById('county').value = Math.round(county_value*16*i+county_value*16*j);
                             }
                         </script>
