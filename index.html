@@ -63,7 +63,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-       <p style="text-align: left;">ver1.02 2024/07/13</p>
+       <p style="text-align: left;">ver1.03 2024/07/13</p>
         <br>
     </header>
 <div class="tabbox">
@@ -111,7 +111,29 @@
          <input type="radio" name="tabset2" id="tabcheck21" checked><label for="tabcheck21" class="tab">運命・導き排出</label>
          <input type="radio" name="tabset2" id="tabcheck22"        ><label for="tabcheck22" class="tab">進化素材</label>
          <div class="tabcontent" id="tabcontent21">
-            赤玉1
+            <body>
+                <h1 style="text-align: center;">運命・導き赤玉排出計算</h1>
+                <form class="diet_form">
+                        <dl>
+                            <div style="display:inline-block; border-radius: 5px; border: 3px dashed #000000;font-size: 100%; padding: 10px;"> 
+                            <dd><span style="color: #ffffcc;">　　　　　　　　　</span>回すガチャ回数：<input type="number" class="box" name="x"></dd>
+                            <dd><span style="color: #ffffcc;">　　　　　　　　　</span>所持済運命の箱：<input type="number" class="box" name="y"></dd>
+                            <dd><span style="color: #ffffcc;">　　　　</span>24時間で獲得できる<span style="color: #FF0000;">赤玉</span>の量：<input type="number" class="box" name="z"></dd> 
+                            <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
+                            <dd><span style="color: #ffffff;"></span>赤玉の数：<input id="count" class="box" type="text" readonly=""></dd>
+                            <header id="header">
+                                <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
+                            </header>
+            
+                            <script>
+                                function calculation(x, y, z) {
+                                const count_value = document.getElementById('count').value = Math.round((x*2+y)*8/24*z);
+                                }
+                            </script>
+                        </div>
+                    </dl>
+                </form>
+            </body>
          </div>
          <div class="tabcontent" id="tabcontent22">
             赤玉2
