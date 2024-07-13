@@ -50,6 +50,8 @@
    #tabcheck1:checked ~ #tabcontent1 { display: block; }
    #tabcheck2:checked ~ #tabcontent2 { display: block; }
    #tabcheck3:checked ~ #tabcontent3 { display: block; }
+   #tabcheck4:checked ~ #tabcontent3 { display: block; }
+   #tabcheck5:checked ~ #tabcontent3 { display: block; }
 </style>
 <html lang="jp">
 <head>
@@ -104,12 +106,20 @@
           </form>
       </body>
    </div>
-    <div class="tabcontent" id="tabcontent2">
-        赤玉
-    </div>
-    <div class="tabcontent" id="tabcontent3">
-        作成中...
-    </div>
+   <div class="tabcontent" id="tabcontent2">
+      <div class="tabbox">
+         <input type="radio" name="tabset" id="tabcheck4" checked><label for="tabcheck4" class="tab">キャラレアリティ</label>
+         <input type="radio" name="tabset" id="tabcheck5"        ><label for="tabcheck5" class="tab">赤玉</label>
+         <div class="tabcontent" id="tabcontent4">
+            赤玉1
+         </div>
+         <div class="tabcontent" id="tabcontent5">
+            赤玉2
+         </div>
+   </div>
+   <div class="tabcontent" id="tabcontent3">
+      作成中...
+   </div>
 </div>
 </html>
  <script src="./js/app.js"></script>
