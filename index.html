@@ -131,16 +131,16 @@
                         <dd><span style="color: #ffffcc;"></span>月間ブースト<input type="number" class="box" name="vipb"></dd>
                           ※有効の場合15
                         <p><input type="button" class="calc-btnnn" onclick="jade(i.value, j.value, k.value, vipa.value, vipb.value);" value="計算"></p>
-                        <dd><span style="color: #ffffff;"></span>緑玉の数：<input id="countnn" class="box" type="text" readonly="">万</dd>
+                        <dd><span style="color: #ffffff;"></span>緑玉の数：<input id="countz" class="box" type="text" readonly="">万</dd>
                         <header id="header">
                             <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
                         </header>
         
                         <script>
-                            function jade(i, j, k,vipa,vipb) {
-                            const countnn_value = document.getElementById('countx').value = Math.round(100+vipa+vipb);
+                            function jade(i, j, k, vipa, vipb) {
+                            const countx_value = document.getElementById('countx').value = Math.round(100+vipa+vipb);
                             const county_value = document.getElementById('county').value = Math.round(k/countx.value*100);
-                            const countnn_value = document.getElementById('countnn').value = Math.round(county.value*16*i+county.value*16*j);
+                            const countz_value = document.getElementById('countz').value = Math.round(county.value*16*i+county.value*16*j);
                             }
                         </script>
                     </dl>
