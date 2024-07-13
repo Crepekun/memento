@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <style type="text/css">
    /* ▼タブ機能の掲載領域の装飾(※必須ではありません) */
-   .tabbox { margin: 0px; padding: 1em; background-color: #f8f8ff; }
+   .tabbox { margin: 0px; padding: 1em; background-color: #ffffff; }
 
    /* ▼タブ機能を制御するラジオボタン(非表示にする) */
    .tabbox input { display: none; }
@@ -30,7 +30,7 @@
    /* ▼チェックが入っているラジオボタンの隣にあるタブの装飾(＝選択状態のタブ) */
    input:checked + .tab {
       color: red;
-      background-color: #ffffcc;
+      background-color: #ffffff;
       position: relative;
       z-index: 10;
    }
@@ -50,6 +50,8 @@
    #tabcheck1:checked ~ #tabcontent1 { display: block; }
    #tabcheck2:checked ~ #tabcontent2 { display: block; }
    #tabcheck3:checked ~ #tabcontent3 { display: block; }
+   #tabcheck21:checked ~ #tabcontent21 { display: block; }
+   #tabcheck22:checked ~ #tabcontent22 { display: block; }
 </style>
 <html lang="jp">
 <head>
@@ -67,7 +69,7 @@
 <div class="tabbox">
     <input type="radio" name="tabset" id="tabcheck1" checked><label for="tabcheck1" class="tab">キャラレアリティ</label>
     <input type="radio" name="tabset" id="tabcheck2"        ><label for="tabcheck2" class="tab">赤玉</label>
-    <input type="radio" name="tabset" id="tabcheck3"        ><label for="tabcheck3" class="tab">作成中...v9</label>
+    <input type="radio" name="tabset" id="tabcheck3"        ><label for="tabcheck3" class="tab">作成中...v10</label>
 
     
     <div class="tabcontent" id="tabcontent1">
@@ -106,12 +108,12 @@
    </div>
    <div class="tabcontent" id="tabcontent2">
       <div class="tabbox">
-         <input type="radio" name="tabset" id="tabcheck4" checked><label for="tabcheck4" class="tab">キャラレアリティ</label>
-         <input type="radio" name="tabset" id="tabcheck5"        ><label for="tabcheck5" class="tab">赤玉</label>
-         <div class="tabcontent" id="tabcontent4">
+         <input type="radio" name="tabset2" id="tabcheck21" checked><label for="tabcheck21" class="tab">キャラレアリティ</label>
+         <input type="radio" name="tabset2" id="tabcheck22"        ><label for="tabcheck22" class="tab">赤玉</label>
+         <div class="tabcontent" id="tabcontent21">
             赤玉1
          </div>
-         <div class="tabcontent" id="tabcontent5">
+         <div class="tabcontent" id="tabcontent22">
             赤玉2
          </div>
    </div>
