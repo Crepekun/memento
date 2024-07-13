@@ -102,8 +102,7 @@
         
                         <script>
                             function jasper(x, y, z) {
-                            const countnn_value = document.getElementById('countnn').value = Math.round(z/24*16*y);
-                            const countn_value = document.getElementById('countn').value = Math.round(countnn.value+z/24*16*y);
+                            const countn_value = document.getElementById('countn').value = Math.round(z/24*16*(x+y));
                             }
                         </script>
                     </dl>
