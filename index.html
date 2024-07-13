@@ -44,12 +44,13 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <p style="text-align: left;">ver2.01 2024/07/13</p>
+        <p style="text-align: left;">ver2.02 2024/07/13</p>
     </header>
         
     <p id="tabcontrol">
         <a href="#tabpage1">キャラレアリティ</a>
         <a href="#tabpage2">赤玉</a>
+        <a href="#tabpage2">緑玉</a>
     </p>
         
     <div id="tabbody">
@@ -103,6 +104,30 @@
                         <script>
                             function jasper(x, y, z) {
                             const countn_value = document.getElementById('countn').value = Math.round(z/24*16*x+z/24*16*y);
+                            }
+                        </script>
+                    </dl>
+                </form>
+            </body>
+        </div>
+       <div id="tabpage2">
+            <body>
+                <h1 style="text-align: center;">運命緑玉計算</h1>
+                <form class="diet_form2">
+                    <dl>
+                        <dd><span style="color: #ffffcc;"></span>回すガチャ回数：<input type="number" class="box" name="x"></dd>
+                        <dd><span style="color: #ffffcc;"></span>所持済運命の箱：<input type="number" class="box" name="y"></dd>
+                        <dd><span style="color: #ffffcc;"></span><span style="color: #ffe4e1;">緑玉</span>/1hの量：<input type="number" class="box" name="z"></dd> 
+                        ※メインクエスト左下で確認できます
+                        <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
+                        <dd><span style="color: #ffffff;"></span>緑玉の数：<input id="countn" class="box" type="text" readonly=""></dd>
+                        <header id="header">
+                            <p>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</p>
+                        </header>
+        
+                        <script>
+                            function jasper(x, y, z) {
+                            const countn_value = document.getElementById('countn').value = Math.round(z/24*x+z/24*y);
                             }
                         </script>
                     </dl>
