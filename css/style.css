@@ -77,10 +77,6 @@ body{
     object-fit: cover;
 }
 
-header p{
-    line-height: 1.4rem;
-    margin-bottom: 10px;
-}
 
 #url{
     color: blue;
@@ -208,10 +204,6 @@ main{
     object-fit: cover;
 }
 
-header p{
-    line-height: 1.4rem;
-    margin-bottom: 10px;
-}
 
 #url{
     color: blue;
