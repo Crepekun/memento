@@ -50,14 +50,7 @@
         </dl>
 </form>
 
-    <script>
-        function calculation(r, rr, sr, srr, ssr, ssrr) {
-        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72+ssrr*144);
-        const rar_value = document.getElementById('rar').value = Math.round(288-count_value);
-        const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
-        }
-    </script>
-    </div><script type="text/javascript">
+    <script type="text/javascript">
 
    var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
    var pages = document.getElementById('tabbody').getElementsByTagName('div');
@@ -94,7 +87,13 @@
    // ▼最初は先頭のタブを選択
    tabs[0].onclick();
 
-</script>
+        function calculation(r, rr, sr, srr, ssr, ssrr) {
+        const count_value = document.getElementById('count').value = Math.round(r*1+rr*4+sr*8+srr*24+ssr*72+ssrr*144);
+        const rar_value = document.getElementById('rar').value = Math.round(288-count_value);
+        const diamond_value = document.getElementById('diamond').value = Math.round(rar_value/3*660);
+        }
+    </script>
+    </div>
 </body>
     </div>
     <div id="tabbody">
