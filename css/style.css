@@ -1,4 +1,6 @@
-
+p {
+  line-height: 1 !important;
+}
 
     .diet_form {
         background: #ff;
