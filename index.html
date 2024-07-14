@@ -116,11 +116,11 @@
                         <dd><span style="color: #ffffcc;">  </span>運命の箱の数：<input type="number" class="box" name="y">個</dd>
                         <span style="color: #ffffcc;"></span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z">個
                         <dd>※メインクエスト左下で確認できます</dd>
-                        <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
+                        <p><input type="button" class="calc-btnn" onclick="jasper(y.value, z.value);" value="計算"></p>
                         <dd><span style="color: #ffffff;">　　</span>赤玉の数：<input id="countn" class="box" type="text" readonly="">個</dd>
         
                         <script>
-                            function jasper(x, y, z) {
+                            function jasper(y, z) {
                             const countn_value = document.getElementById('countn').value = Math.round(z/24*16*y);
                             }
                         </script>
@@ -155,7 +155,6 @@
         </div>
     </div>
   <div class="pc"><dd style="text-align: left;">ver3.08 2024/07/13</dd></div>
-<div class="pc">閲覧者数<img src="/cgi-bin/Count.cgi?ft=3&dd=A&st=1&sh=1&df=ユーザID.count" align=absmiddle alt="[アクセスカウンタ]">人</div>
 <dd style=”text-align:right”>作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</dd>
 </html>
 <script src="./js/app.js"></script>
