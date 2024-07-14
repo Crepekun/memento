@@ -50,20 +50,20 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <p style="text-align: left;">ver2.31 2024/07/13</p>
+        <p style="text-align: left;">ver2.32 2024/07/13</p>
     </header>
         
-    <p id="tabcontrol">
+    <dd id="tabcontrol">
         <a href="#tabpage1">キャラレアリティ</a>
         <a href="#tabpage2">赤玉</a>
         <a href="#tabpage3">緑玉</a>
-    </p>
+    </dd>
         
     <div id="tabbody">
         <div id="tabpage1">
             <body>
             <h1 style="text-align: center;">キャラレアリティ計算</h1>
-               <p><span style="font-size: 9pt;">SSR+からUR+までの進化に必要なRキャラの数を計算します</span></p>
+               <dd><span style="font-size: 9pt;">SSR+からUR+までの進化に必要なRキャラの数を計算します</span></dd>
             <form class="diet_form">
                 <dl>
                         <dd><span style="color: #ffffdd;">　　　　S++</span>Rの数：<input type="number" class="box" name="r"></dd>
@@ -72,8 +72,8 @@
                         <dd><span style="color: #ffffdd;">　　　　+</span><span style="color: #FFCC00;">SR+</span>の数：<input type="number" class="box" name="srr"></dd>
                         <dd><span style="color: #ffffdd;">　　　　+</span><span style="color: #800080;">SSR</span>の数：<input type="number" class="box" name="ssr"></dd>
                         <dd><span style="color: #ffffdd;">　　　　</span><span style="color: #800080;">SSR+</span>の数：<input type="number" class="box" name="ssrr"></dd>   
-                        <p><span style="font-size: 9pt;">URからUR+に進化したい場合は既にSSR+を1体消費</span><br></p>
-                        <p><span style="font-size: 9pt;">していることになるので<span style="color: #800080;">SSR+</span>の数を1にする</span></p>
+                        <dd><span style="font-size: 9pt;">URからUR+に進化したい場合は既にSSR+を1体消費</span><br></dd>
+                        <dd><span style="font-size: 9pt;">していることになるので<span style="color: #800080;">SSR+</span>の数を1にする</span></dd>
                         <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
                         <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
                         <span style="color: #ff0000;">SSR+からUR+までに必要な素材</span>
