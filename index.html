@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 
 <style>
+.example>div{
+    border: 1px solid #999;
+    background: #f2f2f2;
+    padding: 10px;
+    margin: 10px;
+}
+@media(min-width:751px){
+    .sp{
+        display: none !important;
+    }
+}
+@media(max-width:750px){
+    .pc{
+        display: none !important;
+    }
+}
+
   p {
   line-height: 1 !important;
 }
@@ -139,6 +156,11 @@
     </div>
   <dd style="text-align: left;">ver3.05 2024/07/13</dd>
 <dd style=”text-align:right”>作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</dd>
+  
+<div class="example">
+    <div class="sp">PCのとき非表示</div>
+    <div class="pc">スマホのとき非表示</div>
+    <div>どちらでも表示</div>
+</div>
 </html>
-
 <script src="./js/app.js"></script>
