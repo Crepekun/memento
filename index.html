@@ -50,7 +50,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <dd style="text-align: left;">ver2.61 2024/07/13</dd>
+        <dd style="text-align: left;">ver3 2024/07/13</dd>
     </header>
         
     <dd id="tabcontrol">
@@ -66,19 +66,19 @@
                <dd><span style="font-size: 9pt;">SSR+からUR+までの進化に<br>必要なRキャラの数を計算します</span></dd>
             <form class="diet_form">
                 <dl>
-                        <span style="color: #ffffdd;">　　　　S++</span>Rの数：<input type="number" class="box" name="r">
-                        <dd><span style="color: #ffffdd;">　　　　S+</span>R+の数：<input type="number" class="box" name="rr"></dd>
-                        <span style="color: #ffffdd;">　　　　++</span><span style="color: #FFCC00;">SR</span>の数：<input type="number" class="box" name="sr">
-                        <dd><span style="color: #ffffdd;">　　　　+</span><span style="color: #FFCC00;">SR+</span>の数：<input type="number" class="box" name="srr"></dd>
-                        <span style="color: #ffffdd;">　　　　+</span><span style="color: #800080;">SSR</span>の数：<input type="number" class="box" name="ssr">
-                        <dd><span style="color: #ffffdd;">　　　　</span><span style="color: #800080;">SSR+</span>の数：<input type="number" class="box" name="ssrr"></dd>   
+                        <span style="color: #ffffdd;">　　　　S++</span>Rキャラ：<input type="number" class="box" name="r">体
+                        <dd><span style="color: #ffffdd;">　　　　S+</span>R+キャラ：<input type="number" class="box" name="rr">体</dd>
+                        <span style="color: #ffffdd;">　　　　++</span><span style="color: #FFCC00;">SR</span>キャラ：<input type="number" class="box" name="sr">体
+                        <dd><span style="color: #ffffdd;">　　　　+</span><span style="color: #FFCC00;">SR+</span>キャラ：<input type="number" class="box" name="srr">体</dd>
+                        <span style="color: #ffffdd;">　　　　+</span><span style="color: #800080;">SSR</span>キャラ：<input type="number" class="box" name="ssr">体
+                        <dd><span style="color: #ffffdd;">　　　　</span><span style="color: #800080;">SSR+</span>キャラ：<input type="number" class="box" name="ssrr">体</dd>   
                         <span style="font-size: 9pt;">URからUR+に進化したい場合は既にSSR+を1体消費</span><br>
                         <dd><span style="font-size: 9pt;">していることになるので<span style="color: #800080;">SSR+</span>の数を1にする</span></dd>
                         <p><input type="button" class="calc-btn" onclick="calculation(r.value, rr.value, sr.value, srr.value, ssr.value, ssrr.value);" value="計算"></p>
-                        <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly=""></dd>
+                        <dd><span style="color: #ffffff;"></span>所持済Rキャラ：<input id="count" class="box" type="text" readonly="">体</dd>
                         <span style="color: #ff0000;">SSR+からUR+までに必要な素材</span>
-                        <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd> 
-                        <dd><span style="color: #ffffdd;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
+                        <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly="">体</dd> 
+                        <dd><span style="color: #ffffdd;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly="">個</dd> 
                         ※必要なダイヤ=魔女の手紙換算
       
                         <script>
@@ -97,8 +97,7 @@
                 <h1 style="text-align: center;">運命赤玉計算</h1>
                 <form class="diet_form2">
                     <dl>
-                        <span style="color: #ffffcc;"></span>回すガチャ回数：<input type="number" class="box" name="x">
-                        <dd><span style="color: #ffffcc;"></span>所持済運命の箱：<input type="number" class="box" name="y"></dd>
+                        <dd><span style="color: #ffffcc;"></span>運命の箱の数：<input type="number" class="box" name="y"></dd>
                         <span style="color: #ffffcc;">　</span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z">
                         <dd>※メインクエスト左下で確認できます</dd>
                         <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
@@ -106,7 +105,7 @@
         
                         <script>
                             function jasper(x, y, z) {
-                            const countn_value = document.getElementById('countn').value = Math.round(z/24*16*x+z/24*16*y);
+                            const countn_value = document.getElementById('countn').value = Math.round(z/24*16*y);
                             }
                         </script>
                     </dl>
@@ -118,7 +117,7 @@
                 <h1 style="text-align: center;">運命緑玉計算</h1>
                 <form class="diet_form3">
                     <dl>
-                        <span style="color: #ffffcc;"></span>所持済運命の箱：<input type="number" class="box" name="x">
+                        <span style="color: #ffffcc;"></span>運命の箱の数：<input type="number" class="box" name="x">
                         <dd><span style="color: #ffffcc;">　</span><span style="color: #006400;">緑玉</span>/1hの量：<input type="number" class="box" name="y">万</dd> 
                         ※メインクエスト左下で確認できます
                         <dd><span style="color: #ffffcc;"></span>VIP特典ボーナス<input type="number" class="box" name="vipa">％</dd>
