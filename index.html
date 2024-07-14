@@ -50,7 +50,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <dd style="text-align: left;">ver2.38 2024/07/13</dd>
+        <dd style="text-align: left;">ver2.39 2024/07/13</dd><dd style=”text-align:right”>作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</dd>
     </header>
         
     <dd id="tabcontrol">
@@ -80,9 +80,6 @@
                         <dd><span style="color: #ffffff;"></span>必要なRキャラ：<input id="rar" class="box" type="text" readonly=""></dd> 
                         <dd><span style="color: #ffffdd;">R</span>必要なダイヤ：<input id="diamond" class="box" type="text" readonly=""></dd> 
                         ※必要なダイヤ=魔女の手紙換算
-                        <header id="header">
-                            <br><dd>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</dd>
-                        </header>
       
                         <script>
                             function calculation(r, rr, sr, srr, ssr, ssrr) {
@@ -102,13 +99,10 @@
                     <dl>
                         <span style="color: #ffffcc;"></span>回すガチャ回数：<input type="number" class="box" name="x">
                         <dd><span style="color: #ffffcc;"></span>所持済運命の箱：<input type="number" class="box" name="y"></dd>
-                        <dd><span style="color: #ffffcc;">　</span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z"></dd>
-                        ※メインクエスト左下で確認できます
+                        <span style="color: #ffffcc;">　</span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z">
+                        <dd>※メインクエスト左下で確認できます</dd>
                         <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
                         <dd><span style="color: #ffffff;"></span>赤玉の数：<input id="countn" class="box" type="text" readonly=""></dd>
-                        <header id="header">
-                            <dd>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</dd>
-                        </header>
         
                         <script>
                             function jasper(x, y, z) {
@@ -133,9 +127,6 @@
                           ※有効の場合15
                         <p><input type="button" class="calc-btnnn" onclick="jade(i.value, j.value, k.value, vipa.value, vipb.value);" value="計算"></p>
                         <dd><span style="color: #ffffff;"></span>緑玉の数：<input id="countz" class="box" type="text" readonly="">万</dd>
-                        <header id="header">
-                            <dd>　作成者：[<a href="https://x.com/crepekun" id="url">@crepekun</a>]</dd>
-                        </header>
         
                         <script>
                             function jade(i, j, k, vipa, vipb) {
