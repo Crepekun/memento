@@ -50,7 +50,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <dd style="text-align: left;">ver2.40 2024/07/13</dd>
+        <dd style="text-align: left;">ver2.41 2024/07/13</dd>
     </header>
         
     <dd id="tabcontrol">
@@ -126,11 +126,11 @@
                         <dd><span style="color: #ffffcc;"></span>月間ブースト<input type="number" class="box" name="vipb">％</dd> 
                           ※有効の場合15
                         <p><input type="button" class="calc-btnnn" onclick="jade(i.value, j.value, k.value, vipa.value, vipb.value);" value="計算"></p>
-                        <dd><span style="color: #ffffff;"></span>緑玉の数：<input id="countz" class="box" type="text" readonly="">万</dd>
+                        <dd><span style="color: #ffffff;"></span>緑玉の数：<input id="counts" class="box" type="text" readonly="">万</dd>
         
                         <script>
                             function jade(i, j, k, vipa, vipb) {
-                            const countz_value = document.getElementById('countz').value = Math.round(100+vipa+vipb);
+                            const counts_value = document.getElementById('counts').value = Math.round(100+vipa+vipb);
                             }
                         </script>
                        k/(100+vipa+vipb)*100*16*i
