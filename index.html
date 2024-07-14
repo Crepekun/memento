@@ -50,7 +50,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <dd style="text-align: left;">ver3.01 2024/07/13</dd>
+        <dd style="text-align: left;">ver3.02 2024/07/13</dd>
     </header>
         
     <dd id="tabcontrol">
@@ -97,11 +97,11 @@
                 <h1 style="text-align: center;">運命赤玉計算</h1>
                 <form class="diet_form2">
                     <dl>
-                        <dd><span style="color: #ffffcc;"></span>運命の箱の数：<input type="number" class="box" name="y"></dd>
-                        <span style="color: #ffffcc;">　</span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z">
+                        <dd><span style="color: #ffffcc;"></span>運命の箱の数：<input type="number" class="box" name="y">個</dd>
+                        <span style="color: #ffffcc;"></span><span style="color: #FF0000;">赤玉</span>/24hの量：<input type="number" class="box" name="z">個
                         <dd>※メインクエスト左下で確認できます</dd>
                         <p><input type="button" class="calc-btnn" onclick="jasper(x.value, y.value, z.value);" value="計算"></p>
-                        <dd><span style="color: #ffffff;"></span>赤玉の数：<input id="countn" class="box" type="text" readonly=""></dd>
+                        <dd><span style="color: #ffffff;"></span>赤玉の数：<input id="countn" class="box" type="text" readonly="">個</dd>
         
                         <script>
                             function jasper(x, y, z) {
@@ -117,11 +117,11 @@
                 <h1 style="text-align: center;">運命緑玉計算</h1>
                 <form class="diet_form3">
                     <dl>
-                        <span style="color: #ffffcc;"></span>運命の箱の数：<input type="number" class="box" name="x">
+                        <span style="color: #ffffcc;"></span>運命の箱の数：<input type="number" class="box" name="x">個
                         <dd><span style="color: #ffffcc;">　</span><span style="color: #006400;">緑玉</span>/1hの量：<input type="number" class="box" name="y">万</dd> 
                         ※メインクエスト左下で確認できます<br>
-                        <span style="color: #ffffcc;"></span>VIP特典ボーナス<input type="number" class="box" name="vipa">％
-                        <span style="font-size: 8pt;">※オートバトルのプレイヤー景観値と経験珠の獲得増加</span>
+                        <span style="color: #ffffcc;"></span>VIP特典ボーナス<input type="number" class="box" name="vipa">％<br>
+                        <span style="font-size: 8pt;">※オートバトルのプレイヤー景観値と経験珠の獲得増加</span><br>
                         <span style="color: #ffffcc;"></span>月間ブースト<input type="number" class="box" name="vipb">％<br>
                           ※有効の場合15
                         <p><input type="button" class="calc-btnnn" onclick="jade(x.value, y.value, vipa.value, vipb.value);" value="計算"></p>
