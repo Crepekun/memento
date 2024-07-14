@@ -132,7 +132,7 @@
                             function jade(x, y, vipa, vipb) {
                               if (vipa === "") {vipa = 0;}
                               if (vipb === "") {vipb = 0;}
-                              document.getElementById('counts').value = Math.round(100 + parseInt(vipa) + parseInt(vipb));
+                              document.getElementById('counts').value = Math.round(100 + Number(vipa) + Number(vipb));
                             }
                         </script>
                        k/(100+vipa+vipb)*100*16*i
