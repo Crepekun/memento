@@ -50,7 +50,7 @@
         <a href="./index.html">
             <img src="./assets/title.jpg" id="title" alt="title">
         </a>
-        <dd style="text-align: left;">ver2.47 2024/07/13</dd>
+        <dd style="text-align: left;">ver2.48 2024/07/13</dd>
     </header>
         
     <dd id="tabcontrol">
@@ -130,6 +130,9 @@
                         
                         <script>
                             function jade(x, y, vipa, vipb) {
+                              if (vipb === "") {
+                                vipb = 0;
+                              }
                               document.getElementById('counts').value = Math.round(100 + parseInt(vipa) + parseInt(vipb));
                             }
                         </script>
